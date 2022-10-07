@@ -21,10 +21,26 @@ function App() {
     });
   }, []);
 
+  const refreshUser = () => {
+    // setUserObj(authService.currentUser);
+    // when just try set userObj Object, because userObj is too big,
+    // react can't decide whether data is updated or not.
+    const user = authService.currentUser;
+    setUserObj({
+      displayName: user.displayName,
+      uid: user.uid,
+      updateProfile: (args) => user.updateProfile(args),
+    });
+  };
+
   return (
     <div className="App">
       {init ? (
-        <AppRouter isLoggedIn={isLoggedIn} userObj={userObj} />
+        <AppRouter
+          refreshUser={refreshUser}
+          isLoggedIn={isLoggedIn}
+          userObj={userObj}
+        />
       ) : (
         "Initializing"
       )}

@@ -11,7 +11,9 @@ const Nweet = ({ nweetObj, isOwner }) => {
 
     if (ok) {
       await deleteDoc(doc(dbService, `nweets/${nweetObj.id}`));
-      await deleteObject(ref(storageService, nweetObj.attachmentUrl));
+      if (nweetObj.attachmentUrl !== "") {
+        await deleteObject(ref(storageService, nweetObj.attachmentUrl));
+      }
     }
   };
 
