@@ -16,6 +16,7 @@ function App() {
         setUserObj(user);
       } else {
         setIsLoggedIn(false);
+        setUserObj(null);
       }
       setInit(true);
     });
@@ -44,7 +45,7 @@ function App() {
       ) : (
         "Initializing"
       )}
-      <footer>&copy; {new Date().getFullYear()} Nwitter</footer>
+      <footer>&copy; {new Date().getFullYear()} Nwitter by Seolang2</footer>
     </div>
   );
 }
