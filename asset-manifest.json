@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/react-twitter-toy/static/css/main.adf26605.css",
+    "main.js": "/react-twitter-toy/static/js/main.02dfa2ea.js",
+    "index.html": "/react-twitter-toy/index.html",
+    "main.adf26605.css.map": "/react-twitter-toy/static/css/main.adf26605.css.map",
+    "main.02dfa2ea.js.map": "/react-twitter-toy/static/js/main.02dfa2ea.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.adf26605.css",
+    "static/js/main.02dfa2ea.js"
+  ]
+}
